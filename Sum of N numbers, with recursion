@@ -1,0 +1,32 @@
+#include<stdio.h>
+int sum(int l);
+main()
+{
+	int n,i,largest,ele;
+	printf("Enter number of elements :");
+	scanf("%d",&n);
+	printf("\nEnter %d Elements :",n);
+	for (i=1;i<=n;i++)
+	{
+		scanf("%d",&ele);
+		if (ele>largest)
+		{
+			largest=ele;
+		}
+	}
+	printf("\nThe sum of entered number is %d",sum(largest));
+	
+	
+}
+int sum (int l)
+{
+	if(l==1)
+	{
+		return(l);
+		
+	}
+	else 
+	{
+		return(l+sum(l-1));
+	}
+}
